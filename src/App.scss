@@ -1,0 +1,121 @@
+    @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+    * {
+        font-family: 'Bungee', cursive;
+        color: #e9e9e9;
+    }
+    
+     ::-webkit-scrollbar {
+        width: 0px;
+    }
+    
+    div {
+        width: 100%;
+    }
+    
+    .App {
+        z-index: -1;
+        .upper-div {
+            width: 100%;
+            color: #E9E9E9;
+            border-bottom: 10px solid #fff;
+            background: #222;
+            height: 45%;
+        }
+        .lower-div {
+            width: 100%;
+            background: #1793d1;
+            height: 55%;
+        }
+    }
+    
+    .upper-inner-div {
+        height: 45vh;
+    }
+    
+    .lower-inner-div {
+        height: 55vh;
+    }
+    
+    .home {
+        .dev-name {
+            font-size: calc(1.95rem + 1.5vw);
+            .last-name {
+                background: #1893d1;
+                padding: 5px 15px;
+                color: #222;
+            }
+        }
+        img {
+            width: 180px;
+            height: 180px;
+            margin: -90px auto 0 auto;
+            display: block;
+            border: 10px solid #fff;
+        }
+        .details {
+            color: hsl(0, 0%, 85%);
+            .last-detail {
+                background: #1893d1;
+                color: #e9e9e9;
+            }
+        }
+        .lower-inner-div {
+            padding-top: 0 !important;
+        }
+        .about-text {
+            color: #222;
+            line-height: 30px;
+            .highlight {
+                background-color: #222;
+                padding: 5px 10px;
+                border-radius: 5px;
+            }
+        }
+        .about-title {
+            span {
+                background: #222;
+                color: #e9e9e9;
+            }
+        }
+    }
+    
+    .Skill {
+        .upper-inner-div {
+            .highlight {
+                background-color: #1893d1;
+                border-radius: 10px;
+            }
+        }
+        .progress-bar {
+            background-color: #222;
+            color: #e9e9e9;
+        }
+        .skill-label {
+            background-color: #222;
+            border-radius: 10px;
+            width: fit-content;
+        }
+        @each $key,
+        $color in (skill-1:linear-gradient(to right, rgb(192, 57, 43), rgb(142, 68, 173)),
+        skill-2:linear-gradient(to right, rgb(100, 43, 115), rgb(198, 66, 110)),
+        skill-3:#ff304f,
+        skill-4: linear-gradient(to right, rgb(3, 0, 30), rgb(115, 3, 192), rgb(236, 56, 188), rgb(253, 239, 249)),
+        skill-5:linear-gradient(to right, rgb(185, 43, 39), rgb(21, 101, 192)),
+        skill-6: linear-gradient(to right, rgb(0, 159, 255), rgb(236, 47, 75)),
+        skill-7: linear-gradient(to right, rgb(51, 51, 51), rgb(221, 24, 24)),
+        skill-8: linear-gradient(to right, rgb(3, 0, 30), rgb(115, 3, 192), rgb(236, 56, 188), rgb(253, 239, 249))#52565e,
+        skill-9:linear-gradient(to right, rgb(3, 0, 30), rgb(115, 3, 192), rgb(236, 56, 188), rgb(253, 239, 249))) {
+            .#{$key} {
+                background: $color !important;
+            }
+        }
+    }
+    
+    .RecentWork {
+        .upper-inner-div {
+            .highlight {
+                background-color: #1793d1;
+                border-radius: 10px;
+            }
+        }
+    }
