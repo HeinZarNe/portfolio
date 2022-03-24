@@ -3,8 +3,6 @@ import {
   ScrollContainer,
   ScrollPage,
   batch,
-  FadeOut,
-  FadeIn,
   Fade,
   Sticky,
   MoveOut,
@@ -12,8 +10,11 @@ import {
 } from "react-scroll-motion";
 import "./App.css";
 import Home from "./Components/Home";
+import "animate.css";
+import "hover.css";
 import Skill from "./Components/Skill";
 import RecentWork from "./Components/RecentWork";
+import Contact from "./Components/Contact";
 
 function App() {
   return (
@@ -23,18 +24,37 @@ function App() {
         <div className="lower-div"></div>
       </div>
       <ScrollPage page={0}>
-        <Animator animation={batch(Sticky(), Fade(), MoveOut(-1000, 0))}>
+        <Animator animation={batch(Sticky())}>
           <Home />
         </Animator>
       </ScrollPage>
       <ScrollPage page={1}>
-        <Animator animation={batch(Sticky(), Fade(), MoveIn(1000, 0))}>
+        <Animator animation={batch(Sticky())}>
           <Skill />
         </Animator>
       </ScrollPage>
       <ScrollPage page={2}>
-        <Animator animation={batch(Sticky(), Fade())}>
+        <Animator
+          animation={batch(
+            Sticky(),
+            Fade(),
+            MoveIn(1000, 0),
+            MoveOut(-1000, 0)
+          )}
+        >
           <RecentWork />
+        </Animator>
+      </ScrollPage>
+      <ScrollPage page={3}>
+        <Animator
+          animation={batch(
+            Sticky(),
+            Fade(),
+            MoveIn(1000, 0),
+            MoveOut(-1000, 0)
+          )}
+        >
+          <Contact />
         </Animator>
       </ScrollPage>
     </ScrollContainer>
